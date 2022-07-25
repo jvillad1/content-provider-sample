@@ -19,7 +19,7 @@ abstract class AndroidIdDatabase : RoomDatabase() {
         fun getInstance(context: Context): AndroidIdDatabase {
             return instance ?: synchronized(this) {
                 instance ?: buildDatabase(context).also {
-                    it.populateInitialData()
+//                    it.populateInitialData()
                     instance = it
                 }
             }
@@ -33,14 +33,7 @@ abstract class AndroidIdDatabase : RoomDatabase() {
             .build()
     }
 
-    private fun populateInitialData() {
+    /*private fun populateInitialData() {
         androidIdDao().insertAndroidId(AndroidIdEntity(androidId = createRandomId()))
-    }
-
-    private fun createRandomId(): String {
-        val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
-        return (1..16)
-            .map { allowedChars.random() }
-            .joinToString("")
-    }
+    }*/
 }
