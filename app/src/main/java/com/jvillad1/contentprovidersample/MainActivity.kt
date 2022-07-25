@@ -1,11 +1,8 @@
 package com.jvillad1.contentprovidersample
 
-import android.R
 import android.content.ContentResolver
 import android.content.ContentValues
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
